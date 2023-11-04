@@ -3,9 +3,9 @@ model:
   model_type: pretrain_vicuna0
   max_txt_len: 160
   end_sym: "###"
-  low_resource: True
+  low_resource: False
   prompt_template: '###Human: {} ###Assistant: '
-  ckpt: 'please set this value to the path of pretrained checkpoint'
+  ckpt: '/home/docker_current/MiniGPT-4/minigpt4_weights/pretrained_minigpt4_vicuna13.pth'
 
 
 datasets:

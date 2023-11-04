@@ -163,10 +163,10 @@ cython_debug/
 wandb/
 jobs/logs/
 *.out
-*ipynb
+# *ipynb
 .history/
 *.json
-*.sh
+# *.sh
 .ipynb_common
 logs/
 results/

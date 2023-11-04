@@ -42,11 +42,10 @@ RUN ln -s ${CONDA_DIR}/etc/profile.d/conda.sh /etc/profile.d/conda.sh \
   && ${CONDA_DIR}/bin/conda clean -afy
 
 RUN conda install -n minigptv ipykernel --update-deps --force-reinstall -y
+RUN conda install -n minigptv -c conda-forge --update-deps typing-extensions
 
-# RUN echo ". ${CONDA_DIR}/etc/"
-# RUN echo "source activate minigptv" > ~/.bashrc
-# ENV PATH /opt/conda/envs/env/bin:$PATH
-
+RUN echo "conda activate custom_env" >> ~/.bashrc
+RUN echo "source activate minigptv" > ~/.bashrc
 
 #### ADD USER WITH DEFAULT PW
 ARG USER=docker_current
